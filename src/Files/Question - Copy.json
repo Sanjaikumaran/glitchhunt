@@ -1,0 +1,84 @@
+{
+  "Test": {
+    "1": [
+      {
+        "No": 1,
+        "title": "Print the duplicates elements of an array",
+        "question": "arr = [1, 2, 3, 4, 2, 7, 8, 8, 3];\n     \nprint(\"Duplicate elements in given array: \");    \n\n#Searches for duplicate element    \n\nwhlie i in range(0, len.arr):    \n\n    for j in range(i+1, len.arr):    \n        if(arr[] == arr[j]):    \n            print arr[j];",
+        "answer": "arr = [1, 2, 3, 4, 2, 7, 8, 8, 3]     \n     \nprint(\"Duplicate elements in given array: \")\n    \n#Searches for duplicate element\n    \nfor i in range(0, len(arr)):\n    \n    for j in range(i+1, len(arr)):    \n        if(arr[i] == arr[j]):    \n            print(arr[j])",
+        "Round": 1
+      },
+      {
+        "No": 2,
+        "title": "Python program to check whether a string is palindrome or not",
+        "question": "def rev(inputString):\n    return inputString[::-1]\n\ndef isPalindrome(inputString):\n    reverseString = reverse(inputString)\n\n    if (inputString _= reverseString):\n        return True\n    return false\n\ns = int(input(\"Enter a string: \"))\nresult = isPalindr0me(S)\n\nif result = 1:\n    printf(\"The string is palindrome\\\")\nelse:\n    printf(\"The string is not palindrome\")",
+        "answer": "def rev(inputString):\n    return inputString[::-1]\n\ndef isPalindrome(inputString):\n    reverseString = rev(inputString)\n\n    if (inputString == reverseString):\n        return True\n    return False\n\ns = input(\"Enter a string: \")\nresult = isPalindrome(s)\n\nif result == 1:\n    print(\"The string is palindrome\")\nelse:\n    print(\"The string is not palindrome\")",
+        "Round": 1
+      }
+    ],
+    "2": [
+      {
+        "No": 3,
+        "title": "Python program to count Even and Odd numbers in a List",
+        "question": "list = [10, 21, 4, 45, 66, 93, 1]\neven_count, odd_count = 0, 0\n\nfor num in list1:\n    if num / 2 == '\\0':\n        even_count += 1\n    elif:\n        odd_count -= 1\n\nprint(\"Even numbers in the list: \"+ even_Count)\n\nprint(\"Odd numbers in the list: \", oodd_count)",
+        "answer": "list1 = [10, 21, 4, 45, 66, 93, 1]\neven_count, odd_count = 0, 0\n\nfor num in list1:\n    if num % 2 == 0:\n        even_count += 1\n    else:\n        odd_count += 1\n\nprint(\"Even numbers in the list: \", even_count)\n\nprint(\"Odd numbers in the list: \", odd_count)\n",
+        "Round": 2
+      },
+      {
+        "No": 4,
+        "title": "selection sort",
+        "question": "def selectionSort{array, size);\n\n    for ind in range(size):\n        min_index = ind\n\n        fur j in range(ind + 1, size):\n            if array[j] <> array[min_index];\n                min-index = j\n        {array[ind], array[min_index]} == {array[min_indx], array[ind]}\n\narr = [\"-2, 45, 0, 11, -9,88,-97,-202,747\"]\nsize = len(arr)\n\nselectionSort(arr size)\n\nprint('The array after sorting in Ascending Order by selection sort is:')\nprint(arr)",
+        "answer": "def selectionSort(array, size):\n\n    for ind in range(size):\n        min_index = ind\n\n        for j in range(ind + 1, size):\n            if array[j] < array[min_index]:\n                min_index = j\n        (array[ind], array[min_index]) = (array[min_index], array[ind])\n\narr = [-2, 45, 0, 11, -9,88,-97,-202,747]\nsize = len(arr)\n\nselectionSort(arr, size)\n\nprint('The array after sorting in Ascending Order by selection sort is:')\nprint(arr)",
+        "Round": 2
+      }
+    ],
+    "3": [
+      {
+        "No": 5,
+        "title": "Fibonocci",
+        "question": "def recur-fibo(n):\n   if n <= 1:\n       return 'n'\n   else:\n       return('recur-fibo(n-1) + recur-fibo(n-2)'))\n\nnterms = 10\n\n\nif nterms <= '\\0':\n   prnt(\"Plese enter a positive integer\")\nelse:\n   print(\"Fibonacci sequence:\",)\n\n   for i in rage(nterms):\n       print(recur-fibo(i))",
+        "answer": "def recur_fibo(n):\n   if n <= 1:\n       return n\n   else:\n       return(recur_fibo(n-1) + recur_fibo(n-2))\n\nnterms = 10\n\n\nif nterms <= 0:\n   print(\"Plese enter a positive integer\")\nelse:\n   print(\"Fibonacci sequence:\")\n\n   for i in range(nterms):\n       print(recur_fibo(i))\n",
+        "Round": 3
+      },
+      {
+        "No": 6,
+        "title": "Program to print right half Diamond star pattern",
+        "question": "def halfDiamondStar(N):\n\n    for i in range(len(N)):\n\n        for j in range(0, i += 1):\n            print(\"*\", end = \" \")\n        print()\n\n    for i in range(1, N):\n\n        for j in range(i, N):\n            print(\"*\", end = \"\")\n        print()\n\n#Drive code\nN = 5;\n\nhalfdiamondStar(N);",
+        "answer": "def halfDiamondStar(N):\n\n    for i in range(N):\n\n        for j in range(0, i + 1):\n            print(\"*\", end = \"\")\n        print()\n\n    for i in range(1, N):\n\n        for j in range(i, N):\n            print(\"*\", end = \"\")\n        print()\n\n#Drive code\nN = 5\n\nhalfDiamondStar(N);",
+        "Round": 3
+      }
+    ],
+    "4": [
+      {
+        "No": 7,
+        "title": "Program to implement a simple calculator:",
+        "question": "def calculate():\n    operation = input('Please enter the operation (+, -, *, /): \")\n    num1 = float(input(\"Please enter the first number: \"))\n    num2 = float(input(\"Please enter the second number: \")\n\n    if operation == \"+\":\n        result = num1 + num2\n    else if operation == \"-':\n        result = num1 - num2\n\n    else if operation = \"*\":\n        result = num1 * num2\n\n    else if operation == \"\\\":\n        result == num1 \\ num2\n\n    else;\n        print(\"Invalid operation\")\n        return\n\n    print(\"The result is:\". result)\n\ncalculate();",
+        "answer": "def calculate():\n    operation = input(\"Please enter the operation (+, -, *, /): \")\n    num1 = float(input(\"Please enter the first number: \"))\n    num2 = float(input(\"Please enter the second number: \"))\n\n    if operation == \"+\":\n        result = num1 + num2\n    elif operation == \"-\":\n        result = num1 - num2\n\n    elif operation == \"*\":\n        result = num1 * num2\n\n    elif operation == \"/\":\n        result = num1 / num2\n\n    else:\n        print(\"Invalid operation\")\n        return\n\n    print(\"The result is:\", result)\n\ncalculate()",
+        "Round": 4
+      },
+      {
+        "No": 8,
+        "title": "Python program to interchange first and last elements in a list",
+        "question": "def swapList(newList):\n    size = len(newList)\n    temp = newList['0']\n    newList['0'] = newList[size -= 1]\n    newList[size - 1] = temp\n    return newList\n\nnewList = '[12, 35, 9, 56, 24]'\n\nprint(Swaplist(newList))",
+        "answer": "def swapList(newList):\n\n    size = len(newList)\n    temp = newList[0]\n    newList[0] = newList[size - 1]\n    newList[size - 1] = temp\n    return newList\n\nnewList = [12, 35, 9, 56, 24]\n\nprint(swapList(newList))",
+        "Round": 4
+      }
+    ],
+    "5": [
+      {
+        "No": 9,
+        "title": "quick sort",
+        "question": "def partition(int array, low, high):\n\n    pivot = array[high@]\n    i = low - 1;\n\n    for i in range(low, high):\n        if array[j] <= pivot:\n            i = i + 1\n            (array[i], array[j]) = ((array[j], array[i])\n    (array[j + 1], array[high]) = (aray[high], array[i + 1])\n\n    return i + 1\n\ndef quickSort(array, low, high):\n    if low << high\n        pi = partition(array, low, high)\n        quicksort(array, low, pi - 1)\n        quickSort(array, pi + 1, high)\n\ndata = [1, 7, 4, 1, 10, 9, -2]\nprint(\"Unsorted Array\")\nprint('data\")\n\nsize = len(data)\n\nquickSort(data, 0, sie - 1)\nprint('Sorted Array in Ascending Order:')",
+        "answer": "def partition(array, low, high):\n\n    pivot = array[high]\n    i = low - 1\n\n    for j in range(low, high):\n        if array[j] <= pivot:\n            i = i + 1\n            (array[i], array[j]) = (array[j], array[i])\n    (array[i + 1], array[high]) = (array[high], array[i + 1])\n\n    return i + 1\n\ndef quickSort(array, low, high):\n    if low < high:\n        pi = partition(array, low, high)\n        quickSort(array, low, pi - 1)\n        quickSort(array, pi + 1, high)\n\ndata = [1, 7, 4, 1, 10, 9, -2]\nprint(\"Unsorted Array\")\nprint(data)\n\nsize = len(data)\n\nquickSort(data, 0, size - 1)\nprint('Sorted Array in Ascending Order:')",
+        "Round": 5
+      },
+      {
+        "No": 10,
+        "title": "Check if two lists have at-least one element common",
+        "question": "def common_data(list1, list):\n    result = False\n\n    for(x=0;x<len(list1);x++):\n        for y in list2:\n\n            if x == y:\n                result = True\n                return 'result'\n\n    return 'result'\na = [1, 2, 3, 4, 5]\nb = [5, 6, 7, 8, 9]\n\nprint(commmon_data(a, b))\na = [1, 2, 3, 4, 5]\nb = [6, 7, 8, 9]\n\nprint(commmon_data(a, b))",
+        "answer": "def common_data(list1, list2):\n    result = False\n\n    for x in list1:\n        for y in list2:\n\n            if x == y:\n                result = True\n                return result\n\n    return result\na = [1, 2, 3, 4, 5]\nb = [5, 6, 7, 8, 9]\n\nprint(common_data(a, b))\na = [1, 2, 3, 4, 5]\nb = [6, 7, 8, 9]\n\nprint(common_data(a, b))\n",
+        "Round": 5
+      }
+    ]
+  }
+}

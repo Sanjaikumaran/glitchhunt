@@ -10,28 +10,27 @@ import Question from "../Files/Question.json";
 import * as XLSX from "xlsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-var timer = {
-    min: 0,
-    sec: 0,
-  },
-  startCount = 5;
-const Timer = () => {
-  console.log("hi");
-  setInterval(() => {
-    timer["sec"] = timer["sec"] + 1;
-    if (timer["sec"] === 60) {
-      timer["min"] = timer["min"] + 1;
-      timer["sec"] = 0;
-    }
-    let min = timer["min"];
-    min = min > 9 ? min : "0" + min;
-    let sec = timer["sec"];
-    sec = sec > 9 ? sec : "0" + sec;
-    if (document.querySelector("#spnTimer") !== null)
-      document.querySelector("#spnTimer").innerHTML = min + ":" + sec;
-  }, 1000);
-};
 const Hunter = ({ setFlag, Round }) => {
+  var timer = {
+      min: 0,
+      sec: 0,
+    },
+    startCount = 5;
+  const Timer = () => {
+    setInterval(() => {
+      timer["sec"] = timer["sec"] + 1;
+      if (timer["sec"] === 60) {
+        timer["min"] = timer["min"] + 1;
+        timer["sec"] = 0;
+      }
+      let min = timer["min"];
+      min = min > 9 ? min : "0" + min;
+      let sec = timer["sec"];
+      sec = sec > 9 ? sec : "0" + sec;
+      if (document.querySelector("#spnTimer") !== null)
+        document.querySelector("#spnTimer").innerHTML = min + ":" + sec;
+    }, 1000);
+  };
   const [activeQuestion, setActiveQuestion] = React.useState(0);
   // Question[localStorage.eventName][Round]
   const [questions, setQuestions] = useState([]);
@@ -84,7 +83,7 @@ const Hunter = ({ setFlag, Round }) => {
                     fontSize: "22px",
                   }}>
                   {" "}
-                  {questions.indexOf(questions[activeQuestion]) + 1}.{" "}
+                  {questions[activeQuestion].No}.{" "}
                 </span>{" "}
                 {questions[activeQuestion].title} ?
               </h3>{" "}

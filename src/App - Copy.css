@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  font-family: "Times New Roman", Times, serif;
+}
+
+button:disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.mainTitle {
+  text-align: center;
+  background-color: #025aa5;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: block !important;
+  }
+
+  .mainTitle h1 {
+    margin: 10px 0;
+}
+
+.quiz-container {
+  border-radius: 4px;
+  margin-top: 100px;
+  padding: 30px 60px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.quiz-container .active-question-no {
+  font-size: 32px;
+  font-weight: 500;
+  color: #800080;
+}
+
+.wel h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  font-weight: 800;
+  display: block;
+  margin: 65px 0 0 0;
+}
+
+.quiz-container h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+button {
+  /* background: linear-gradient(90.04deg, #800080 0.03%, #ffc0cb 99.96%); */
+  background: #ffc0cb;
+  border-radius: 9px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 10px 42px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.quiz-container button:disabled {
+  background: #e7e8e9;
+  color: #9fa3a9;
+  cursor: not-allowed;
+}
+
+button,
+.btn {
+  padding: 10px;
+  border: 1px solid gray;
+  min-width: 100px;
+  border-radius: 5px;
+  background-color: #025aa5;
+  color: #fff;
+  cursor: pointer;
+}
+
+.divAdminSec div {
+  line-height: 4;
+}
+
+.divAdminSec button {
+  margin: 10px;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #fff;
+  color: #025aa5;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.butn {
+  margin: 10px auto 20px auto;
+}
+
+.divWrapper {
+  margin-top: 0;
+  padding: 0 10px;
+  display: flex;
+  height: 90vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  border-radius: 5px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #025aa5;
+  border-radius: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.editor textarea:focus-visible {
+  outline: none;
+}
+
+.editor * {
+  font-family: "Fira code", "Fira Mono", monospace !important;
+}
+.editor {
+  font-family: "Fira code", "Fira Mono", monospace !important;
+  font-size: 12;
+  display: inline-block;
+}
+.divpanel {
+  margin-top: 0;
+
+  display: inline-block;
+  height: 85vh;
+  margin: 10px 0;
+  }
+
+  .divpanel h3 {
+    margin-top: 0;
+  }
+
+  .divStartPage {
+    width: 400px;
+    text-align: center;
+    display: contents;
+  }
+
+  ul {
+    list-style: inside;
+  }
+
+  .login-container {
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 5px 20px 0 #000c2f4d;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  margin: 5% auto;
+  overflow: hidden;
+  width: 400px;
+  }
+
+  .input {
+    height: 50px;
+    max-width: 450px;
+    position: relative;
+    width: 80%;
+  }
+
+  .input-holder {
+    background-color: #f1f3f4;
+    border-radius: 5px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    will-change: transform, box-shadow;
+  }
+
+  .input-input {
+    background-color: #f1f3f4;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px 0 #000c2f4d;
+    font-size: 1.05em;
+    height: inherit;
+    padding: 0 5%;
+    border: none;
+    width: -webkit-fill-available;
+  }
+
+  .input-open {
+    margin: 30px;
+  }
+
+  .Input-label {
+  align-items: center;
+  color: #025aa5 !important;
+  flex-direction: row;
+  font-size: 1em;
+  font-weight: 400;
+  height: 100%;
+  left: 5%;
+  pointer-events: none;
+  position: absolute;
+  text-transform: capitalize;
+  top: -20px;
+  transition: font-size 0.2s ease-in-out 0.15s,
+  -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out,
+  font-size 0.2s ease-in-out 0.15s;
+  transition: transform 0.2s ease-in-out,
+  font-size 0.2s ease-in-out 0.15s,
+  -webkit-transform 0.2s ease-in-out;
+  width: 90%;
+  will-change: transform,
+  font-size;
+}
+
+@media screen and (max-width: 700px) {
+  .divWrapper {
+    margin-top: 0;
+    padding: 0 10px;
+    display: block;
+    height: 90vh;
+  }
+  .divpanel {
+    padding-left: 0;
+    width: 100%;
+  }
+  button,
+  .btn {
+    padding: 10px;
+    border: 1px solid gray;
+    min-width: 100px;
+    border-radius: 5px;
+    background-color: #025aa5;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+/* Importing the Roboto font from Google Fonts. */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+
+/* Set font of all elements to 'Roboto' */
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+/* Remove outline of all elements on focus */
+
+*:focus {
+	outline: 0;
+}
+
+
+.containerAdmin h3 {
+	text-align: center;
+}
+
+/* Add styles to 'container' class */
+
+.containerAdmin {
+	padding: 12px 24px 24px 24px;
+	margin: 48px 12px;
+	background: #E3F2FD;
+	border-radius: 4px;
+}
+
+/* Add styles to 'label' selector */
+
+.form label {
+	font-size: 0.85em;
+	margin-left: 12px;
+}
+
+/* Add styles to 'input' and 'textarea' selectors */
+
+.form input[type=text],input[type=email],textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/* Add styles to show 'focus' of selector */
+
+.form input[type=text]:focus,input[type=email]:focus, textarea:focus {
+	border: 1px solid green;
+}
+
+/* Add styles to the submit button */
+
+.form input[type=submit] {
+	background: #64B5F6;
+	margin: 0 auto;
+	outline: 0;
+	color: white;
+	border: 0;
+	padding: 12px 24px;
+	border-radius: 4px;
+	transition: all ease-in-out 0.1s;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+/* Add styles for 'focus' property */
+
+.form input[type=submit]:focus {
+	background: #A5D6A7;
+	color: whitesmoke;
+}
+
+/* Style 'hover' property */
+
+.form input[type=submit]:hover {
+	background: #2196F3;
+}
+
+/* Align items to center of the 'div' with the class 'center' */
+.center {
+	text-align: center;
+}

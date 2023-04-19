@@ -6,6 +6,26 @@ import Question from "../Files/Question.json";
 
 const Credential = User;
 const Login = ({ setFlag, startEvent }) => {
+  var timer = {
+      min: 0,
+      sec: 0,
+    },
+    startCount = 5;
+  const Timer = () => {
+    setInterval(() => {
+      timer["sec"] = timer["sec"] + 1;
+      if (timer["sec"] === 60) {
+        timer["min"] = timer["min"] + 1;
+        timer["sec"] = 0;
+      }
+      let min = timer["min"];
+      min = min > 9 ? min : "0" + min;
+      let sec = timer["sec"];
+      sec = sec > 9 ? sec : "0" + sec;
+      if (document.querySelector("#spnTimer") !== null)
+        document.querySelector("#spnTimer").innerHTML = min + ":" + sec;
+    }, 1000);
+  };
   const isDisable = () => {
     let isValidate = false;
     if (
@@ -136,6 +156,7 @@ const Login = ({ setFlag, startEvent }) => {
                 localStorage["Round"] = user[0]["Round"];
                 startEvent(3, localStorage.Round);
 
+                Timer();
                 // document.querySelector(".login-container").style.display =
                 //   "none";
                 // document.querySelector(".divStartPage h2").innerHTML =

@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "Test",
+    "EventName": "Test",
+    "Round": "1",
+    "timeTaken": "00:09",
+    "Result": 0,
+    "answerSet": [
+      {
+        "QuestionNo": 1,
+        "QuestionTitle": "Print the duplicates elements of an array",
+        "Answer": "arr = [1, 2, 3, 4, 2, 7, 8, 8, 3]     \n     \nprint(\"Duplicate elements in given array: \")\n    \n#Searches for duplicate element\n    \nfor i in range(0, len(arr)):\n    \n    for j in range(i+1, len(arr)):    \n        if(arr[i] == arr[j]):    \n            print(arr[j])"
+      },
+      {
+        "QuestionNo": 2,
+        "QuestionTitle": "Python program to check whether a string is palindrome or not",
+        "Answer": "def rev(inputString):\n    return inputString[::-1]\n\ndef isPalindrome(inputString):\n    reverseString = rev(inputString)\n\n    if (inputString == reverseString):\n        return True\n    return False\n\ns = input(\"Enter a string: \")\nresult = isPalindrome(s)\n\nif result == 1:\n    print(\"The string is palindrome\")\nelse:\n    print(\"The string is not palindrome\")"
+      }
+    ]
+  }
+]
