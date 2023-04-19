@@ -1,3 +1,4 @@
+import Toaster from "./Toaster";
 const Home = ({ setFlag }) => {
   return (
     <>

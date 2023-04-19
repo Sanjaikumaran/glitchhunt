@@ -41,16 +41,16 @@ app.post("/download", function (req, res) {
   });
 });
 
-// fs.readFile("./Files/Question.json", "utf8", (err, jsonString) => {
-//   if (err) {
-//     return;
-//   }
-//   try {
-//     const data = JSON.parse(jsonString);
-//   } catch (err) {
-//     console.log("Error parsing JSON string:", err);
-//   }
-// });
+fs.readFile("./Files/Question.json", "utf8", (err, jsonString) => {
+  if (err) {
+    return;
+  }
+  try {
+    const data = JSON.parse(jsonString);
+  } catch (err) {
+    console.log("Error parsing JSON string:", err);
+  }
+});
 // fs.writeFile("./Files/Question.json", JSON.stringify(updatedJSON), (err) => {
 //   if (err) console.log("Error writing file:", err);
 // });

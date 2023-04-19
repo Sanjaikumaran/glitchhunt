@@ -16,7 +16,7 @@ button:disabled {
 
 .mainTitle {
   text-align: center;
-  background-color: #0589a0;
+  background-color: #025aa5;
   color: #fff;
   position: fixed;
   width: 100%;
@@ -82,7 +82,7 @@ button,
   border: 1px solid gray;
   min-width: 100px;
   border-radius: 5px;
-  background-color: #0589a0;
+  background-color: #025aa5;
   color: #fff;
   cursor: pointer;
 }
@@ -98,7 +98,7 @@ button,
 button:hover,
 .btn:hover {
   background-color: #fff;
-  color: #0589a0;
+  color: #025aa5;
   cursor: pointer;
   transition: 500ms;
 }
@@ -121,7 +121,7 @@ button:hover,
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0589a0;
+  background: #025aa5;
   border-radius: 5px !important;
 }
 
@@ -212,7 +212,7 @@ button:hover,
 
   .Input-label {
   align-items: center;
-  color: #0589a0 !important;
+  color: #025aa5 !important;
   flex-direction: row;
   font-size: 1em;
   font-weight: 400;
@@ -251,7 +251,7 @@ button:hover,
     border: 1px solid gray;
     min-width: 100px;
     border-radius: 5px;
-    background-color: #0589a0;
+    background-color: #025aa5;
     color: #fff;
     cursor: pointer;
   }

@@ -1,10 +1,15 @@
-import React, { useEffect } from "react";
 import User from "../Files/User.json";
-import Question from "../Files/Question.json";
-import * as XLSX from "xlsx";
+import React, { useEffect } from "react";
 import Editor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-javascript";
+import "prismjs/themes/prism.css";
 import axios from "axios";
+import Question from "../Files/Question.json";
+import * as XLSX from "xlsx";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Hunter = (setFlag) => {
   var timer = {
       min: 0,
@@ -91,7 +96,7 @@ const Hunter = (setFlag) => {
       "load",
       () => {
         axios
-          .post("http://192.168.193.51:4001/Upload", {
+          .post("http://localhost:4001/Upload", {
             data: reader.result,
             fileName: path,
           })
@@ -107,7 +112,7 @@ const Hunter = (setFlag) => {
   };
   const download = (flag) => {
     axios
-      .post("http://192.168.193.51:4001/download", {
+      .post("http://localhost:4001/download", {
         filePath: "../Files/Round_" + flag,
       })
       .then((result) => {
@@ -129,6 +134,23 @@ const Hunter = (setFlag) => {
     //XLSX.write(workbook, { bookType: "xlsx", type: "binary" });
     XLSX.writeFile(workbook, "Debugging.xlsx");
   };
+  const toastDark = () => toast.dark("This is Toast Notification for Dark");
+  const toastInfo = () => toast.info("This is Toast Notification for Info");
+  const toastSuccess = () =>
+    toast.success("This is Toast Notification for Success");
+  const toastWarn = () => toast.warn("This is Toast Notification for Warn");
+  const toastError = () => toast.error("This is Toast Notification for Error");
+  <ToastContainer
+    position="top-right"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+  />;
   return (
     <>
       {round !== 0 ? (
@@ -306,9 +328,9 @@ const Hunter = (setFlag) => {
                               //   );
                               // });
                               let user = {
-                                uName: localStorage["uName"],
-                                pwd: localStorage["pwd"],
                                 Name: localStorage["Name"],
+                                Event: localStorage["eventName"],
+                                Round: localStorage["Round"],
                               };
                               questions[0]["timeTaken"] =
                                 document.querySelector("#spnTimer").innerHTML;
@@ -317,8 +339,9 @@ const Hunter = (setFlag) => {
                                 Result: JSON.stringify(questions),
                               };
                               console.log(questions);
+                              console.log(Object.keys(quiz)[0]);
                               axios
-                                .post("http://192.168.193.51:4001/Upload", {
+                                .post("http://localhost:4001/Upload", {
                                   data: JSON.stringify(arr),
                                   fileName:
                                     "../Files/" +
@@ -327,6 +350,7 @@ const Hunter = (setFlag) => {
                                     localStorage["Name"].replaceAll(" ", "") +
                                     ".txt",
                                 })
+
                                 .then((result) => {
                                   // alert("Thank You...!");
                                   window.confirm("Thank You...!");
@@ -481,34 +505,13 @@ const Hunter = (setFlag) => {
             <div>
               <h1
                 style={{
-                  color: "rgb(5, 137, 160)",
+                  color: "#025aa5",
                   fontSize: "30px",
                   marginBottom: "10px",
                   textAlign: "center",
                 }}>
-                JEPPIAAR ENGINEERING COLLEGE{" "}
+                Sign In{" "}
               </h1>{" "}
-            </div>{" "}
-            <div
-              className="input input-open"
-              style={{
-                display: "none",
-              }}>
-              <div className="input-holder">
-                <input
-                  type="text"
-                  className="input-input"
-                  id="name"
-                  name="name"
-                  onChange={(e) => {
-                    setLogDetails({
-                      ...LogDetails,
-                      name: e.target.value,
-                    });
-                  }}
-                />{" "}
-                <label className="Input-label"> Name </label>{" "}
-              </div>{" "}
             </div>{" "}
             <div className="input input-open">
               <div className="input-holder">
@@ -561,25 +564,24 @@ const Hunter = (setFlag) => {
                 }}
                 onClick={() => {
                   let uName = document.getElementById("uName").value,
-                    pwd = document.getElementById("password").value,
-                    name = document.getElementById("name").value;
+                    pwd = document.getElementById("password").value;
+
                   let user = Credential.filter((item) => {
                     return item["uName"] === uName && item["pwd"] === pwd;
                   });
                   if (user.length > 0) {
-                    if (
-                      uName === "sanjaikumaran0311@gmail.com" &&
-                      name === ""
-                    ) {
+                    if (uName === user[0].uName && user[0].Acc == "Admin") {
+                      toastSuccess();
                       document.querySelector(".login-container").style.display =
                         "none";
                       document.querySelector(".divAdmin").style.display = "";
                       return false;
                     }
 
-                    localStorage["uName"] = uName;
-                    localStorage["pwd"] = pwd;
                     localStorage["Name"] = user[0]["Name"];
+                    localStorage["eventName"] = user[0]["eventName"];
+                    localStorage["Round"] = user[0]["Round"];
+
                     Timer();
                     document.querySelector(".login-container").style.display =
                       "none";
@@ -587,7 +589,7 @@ const Hunter = (setFlag) => {
                       "Welcome " + localStorage["Name"];
                     document.querySelector(".divStartPage").style.display = "";
                   } else if (uName !== "" && pwd !== "") {
-                    alert("Please Contact Us...!");
+                    toastError();
                   }
                 }}
                 {...isDisable()}>

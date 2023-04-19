@@ -2,7 +2,16 @@
   {
     "uName": "sanjaikumaran0311@gmail.com",
     "pwd": "lakshmi@0311",
-    "Name": "SK"
+    "Name": "SK",
+    "eventName": "Debuging",
+    "Acc": "Admin"
   },
-  { "uName": "test@jpr.in", "pwd": "123", "Name": "Test" }
+  {
+    "uName": "test@jpr.in",
+    "pwd": "123",
+    "Name": "Test",
+    "eventName": "Debuging",
+    "Acc": "User",
+    "Round": 1
+  }
 ]
