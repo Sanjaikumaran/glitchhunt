@@ -1,6 +1,5 @@
 import * as XLSX from "xlsx";
 import axios from "axios";
-import "../a";
 const Admin = () => {
   const readUploadFile = (e) => {
     e.preventDefault();
@@ -93,7 +92,7 @@ const Admin = () => {
           style={{
             fontSize: "17px",
           }}>
-          <h3> Welcome SK! </h3>{" "}
+          <h3> Welcome {localStorage.Name}! </h3>{" "}
         </div>{" "}
         <div
           style={{
@@ -207,9 +206,9 @@ const Admin = () => {
           </button>{" "}
         </div>{" "}
       </div>{" "}
-      <div className="container">
+      <div className="containerAdmin">
         <h3>Contact Form</h3>
-        <form action="#" name="contact_form">
+        <form className="form" action="#" name="contact_form">
           <label htmlFor="event_name">Event Name</label>
           <input
             name="event_name"

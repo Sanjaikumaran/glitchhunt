@@ -10,7 +10,7 @@ import Question from "../Files/Question.json";
 import * as XLSX from "xlsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const Hunter = (setFlag) => {
+const Hunter = ({ setFlag }) => {
   var timer = {
       min: 0,
       sec: 0,
@@ -377,7 +377,7 @@ const Hunter = (setFlag) => {
         </>
       ) : (
         <>
-          <div
+          {/* <div
             className="divAdmin"
             style={{
               display: "none",
@@ -500,10 +500,13 @@ const Hunter = (setFlag) => {
                 Download - 4{" "}
               </button>{" "}
             </div>{" "}
-          </div>{" "}
-          <div className="login-container">
+          </div>{" "} */}
+          {/* <div className="login-container">
             <div>
               <h1
+                onClick={() => {
+                  setFlag(0);
+                }}
                 style={{
                   color: "#025aa5",
                   fontSize: "30px",
@@ -585,7 +588,7 @@ const Hunter = (setFlag) => {
                     Timer();
                     document.querySelector(".login-container").style.display =
                       "none";
-                    document.querySelector(".divStartPage h1").innerHTML =
+                    document.querySelector(".divStartPage h2").innerHTML =
                       "Welcome " + localStorage["Name"];
                     document.querySelector(".divStartPage").style.display = "";
                   } else if (uName !== "" && pwd !== "") {
@@ -596,15 +599,11 @@ const Hunter = (setFlag) => {
                 Log In{" "}
               </button>{" "}
             </div>{" "}
-          </div>{" "}
-          <div
-            className="divStartPage"
-            style={{
-              display: "none",
-            }}>
+          </div>{" "} */}
+          <div className="divStartPage">
             <div
               style={{
-                backgroundColor: "#0589a0",
+                backgroundColor: "#025aa5",
                 textAlign: "center",
                 color: "white",
               }}>
@@ -612,9 +611,12 @@ const Hunter = (setFlag) => {
                 style={{
                   padding: "10px",
                 }}>
-                Welcome{" "}
+                {localStorage.eventName}
               </h1>{" "}
             </div>{" "}
+            <div style={{ margin: "3rem 0" }} className="container">
+              <h2> Welcome</h2>{" "}
+            </div>
             <div
               style={{
                 display: "block",
@@ -625,7 +627,6 @@ const Hunter = (setFlag) => {
               <h2> INSTRUCTIONS: </h2>{" "}
               <ul>
                 <li> A team can have atmost two participants. </li> <br></br>{" "}
-                <li> Event consits of Two levels. </li> <br></br>{" "}
                 <li> Team will be disqualified if any malpractices found. </li>{" "}
                 <br></br> <li> Timer will be maintained in the background. </li>{" "}
                 <br></br>{" "}
@@ -641,7 +642,10 @@ const Hunter = (setFlag) => {
                   Comma(, ).{" "}
                 </li>{" "}
                 <br></br>{" "}
-                <li> If you have any doubts, you can ask coordinators. </li>{" "}
+                <li>
+                  {" "}
+                  If you have any doubts, you can ask your coordinators.{" "}
+                </li>{" "}
                 <br></br>{" "}
               </ul>{" "}
             </div>{" "}
@@ -667,6 +671,7 @@ const Hunter = (setFlag) => {
                           document.querySelector("#spnStartCount").innerHTML =
                             "Will Start in <b>" + startCount + " Sec.</b>";
                           if (startCount === 0) {
+                            Timer();
                             clearInterval(sTimer);
                             timer = {
                               min: 0,

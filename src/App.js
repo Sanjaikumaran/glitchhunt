@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
 import "./App.css";
+
+import Login from "./Pages/Login";
 import Home from "./Pages/Home";
 import Hunter from "./Pages/Hunter";
 import Toaster from "./Pages/Toaster";
-import Json from "./Pages/jsonForm";
+import Admin from "./Pages/AdminPage";
 export default function App() {
-  // const [flag, setFlag] = () => {
-  //   useState(0);
-  // };
-  var flag = 4;
+  const [flag, setFlag] = React.useState(0);
+
   return (
     <>
-      {flag == 0 && <Home />}
-      {flag == 1 && <Hunter />}
+      {flag == 0 && <Home setFlag={setFlag} />}
+      {flag == 1 && <Login setFlag={setFlag} />}
+      {flag == 2 && <Hunter setFlag={setFlag} />}
       {flag == 3 && <Toaster />}
-      {flag == 4 && <Json />}
+      {flag == 4 && <Admin setFlag={setFlag} />}
     </>
   );
 }
